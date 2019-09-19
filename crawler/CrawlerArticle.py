@@ -1,4 +1,4 @@
-class crawlerArticle():
+class CrawlerArticle():
     def __init__(self,title,emoji,content,image):
         self.title = title
         self.emoji = emoji
