@@ -1,3 +1,5 @@
-import crawler
+from  crawler import CrawlerArticle, ArticleFetcher
 
-fet
+fetcher = ArticleFetcher.ArticleFetcher()
+for element in fetcher.fetch():
+    print(element)

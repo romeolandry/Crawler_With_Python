@@ -3,7 +3,7 @@ import time
 import requests as req
 from bs4 import BeautifulSoup as bs
 from urllib.parse import urljoin
-from .CrawlerArticle import CrawlerArticle
+from .CrawlerArticle import crawlerArticle
 class ArticleFetcher():
     def fetch(self):
         navigation = True
@@ -20,7 +20,7 @@ class ArticleFetcher():
                 title = card.select(".card-title span")[1].text
                 image = urljoin(url,card.select_one("img").attrs["src"])
                 
-                yield CrawlerArticle(title,emoji,content,image)
+                yield crawlerArticle(title,emoji,content,image)
                 
                 
             nav = doc_seite.select_one(".navigation")
